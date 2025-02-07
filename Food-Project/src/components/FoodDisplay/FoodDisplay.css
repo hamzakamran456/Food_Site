@@ -12,3 +12,13 @@
     row-gap: 50px;
     margin-top: 30px;
 }
+@media (max-width:1050px){
+    .food-display-list{
+        grid-template-columns: repeat(auto-fill, minmax(253px, 1fr));
+    }
+}
+@media (max-width:900px){
+    .food-display-list{
+        grid-template-columns: repeat(auto-fill, minmax(292px, 1fr));
+    }
+}
