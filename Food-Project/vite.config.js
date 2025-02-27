@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './',  // Ensure assets load correctly on Vercel
+  base: './', 
   build: {
-    outDir: 'dist',  // Ensure output folder is correct
+    outDir: 'dist',  
   },
   server: {
     port: 5173,
