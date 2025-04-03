@@ -4,7 +4,7 @@ import "./FoodDisplay.css";
 import { StoreContext } from "../../context/StoreContext";
 import FoodItem from "../FoodItem/FoodItem";
 
-const FoodDisplay = ({ category }) => {
+const FoodDisplay = ({ category = "All" }) => {
   const { food_list } = useContext(StoreContext);
 
   return (
@@ -16,7 +16,7 @@ const FoodDisplay = ({ category }) => {
           .map((item, index) => (
             <FoodItem
               key={index}
-              id={item._id}
+              id={Number(item._id)}
               name={item.name}
               description={item.description}
               price={item.price}
@@ -27,11 +27,6 @@ const FoodDisplay = ({ category }) => {
     </div>
   );
 };
-
-FoodDisplay.defaultProps = {
-  category: "All",
-};
-
 FoodDisplay.propTypes = {
   category: PropTypes.string,
 };
